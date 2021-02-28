@@ -2,26 +2,32 @@
     "name": "happy-planet",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon dist/app.js"
+        "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' --files src/app.ts"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "jsonwebtoken": "^8.5.1",
         "passport": "^0.4.1",
         "passport-jwt": "^4.0.0",
+        "pg": "^8.5.1",
+        "typeorm": "^0.2.31",
+        "typescript-rest": "^3.0.2",
         "validator": "^13.5.2"
     },
     "devDependencies": {
+        "@types/cors": "^2.8.6",
         "@types/express": "^4.17.11",
         "@types/node": "^14.14.31",
         "nodemon": "^2.0.7",
+        "ts-node": "^8.10.2",
         "typescript": "^4.1.5"
     }
 }
